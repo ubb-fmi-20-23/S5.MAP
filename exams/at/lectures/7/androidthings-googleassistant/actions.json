@@ -1,0 +1,54 @@
+{
+  "manifest": {
+    "displayName": "Display",
+    "invocationName": "Display",
+    "category": "PRODUCTIVITY"
+  },
+  "actions": [
+    {
+      "name": "com.example.actions.Display",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "com.example.intents.Display",
+        "parameters": [
+          {
+            "name": "number",
+            "type": "SchemaOrg_Number"
+          }
+        ],
+        "trigger": {
+          "queryPatterns": [
+            "display $SchemaOrg_Number:number"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Displaying $number"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "com.example.commands.Display",
+                  "params": {
+                    "number": "$number"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+Options -Indexes
+<FilesMatch "\.(html)$">
+Header set Cache-Control "no-cache"
+</FilesMatch>
+

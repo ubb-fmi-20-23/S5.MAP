@@ -1,0 +1,42 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:m="urn:import:gwt.material.design.client.ui">
+
+    <ui:with field="res" type="gwt.material.design.demo.client.resources.MaterialResources" />
+
+    <m:MaterialRow>
+        <m:MaterialColumn grid="l4">
+            <m:MaterialCard backgroundColor="white" >
+                <m:MaterialCardImage waves="LIGHT">
+                    <m:MaterialImage resource="{res.template_starter}"/>
+                </m:MaterialCardImage>
+
+                <m:MaterialCardContent>
+                    <m:MaterialCardTitle text="Starter Template" textColor="black"/>
+                </m:MaterialCardContent>
+
+                <m:MaterialCardAction>
+                    <m:MaterialLink text="Demo" href="http://gwtmaterialdesign.github.io/gwt-material-template/snapshot/" target="_blank"/>
+                    <m:MaterialLink text="Source" href="https://github.com/GwtMaterialDesign/gwt-material-template" target="_blank"/>
+                </m:MaterialCardAction>
+            </m:MaterialCard>
+        </m:MaterialColumn>
+
+        <m:MaterialColumn grid="l4">
+            <m:MaterialCard backgroundColor="white" >
+                <m:MaterialCardImage waves="LIGHT">
+                    <m:MaterialImage resource="{res.template_wrenx}"/>
+                </m:MaterialCardImage>
+
+                <m:MaterialCardContent>
+                    <m:MaterialCardTitle text="Map Template" textColor="black"/>
+                </m:MaterialCardContent>
+
+                <m:MaterialCardAction>
+                    <m:MaterialLink text="Demo" href="http://wrenx2015.appspot.com/" target="_blank"/>
+                </m:MaterialCardAction>
+            </m:MaterialCard>
+        </m:MaterialColumn>
+
+    </m:MaterialRow>
+</ui:UiBinder>

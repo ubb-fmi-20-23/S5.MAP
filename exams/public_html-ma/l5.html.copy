@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+  <title>Securing mobile apps</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="/~dan/global.css">
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-85188810-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+<body>
+<div class="title">Securing mobile apps</div>
+<br/>
+<div class="section">Topics</div>
+<ul>
+  <li><a href="https://www.android.com/security-center/">Android security</a>
+    <ul>
+      <li>Tutorials:
+        <ul>
+          <li><a href="https://developer.android.com/guide/topics/permissions/overview">System
+            Permissions</a></li>
+          <li><a href="http://www.vogella.com/tutorials/AndroidPermissions/article.html">The Android
+            permissions model</a></li>
+          <li><a href="https://developer.android.com/training/permissions/requesting">Requesting
+            Permissions at Run Time</a></li>
+          <li><a href="https://source.android.com/security/overview/app-security.html">Application
+            security</a></li>
+        </ul>
+      </li>
+      <li>API documentation
+        <ul>
+          <li><a href="https://developer.android.com/reference/android/Manifest.permission">Manifest.permission</a>
+          </li>
+          <li><a
+              href="https://developer.android.com/reference/android/support/v4/content/ContextCompat">ContextCompat</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/jwtk/jjwt">Json Web Tokens</a>
+    <ul>
+      <li>Tutorials:
+        <ul>
+          <li><a href="https://stormpath.com/blog/jjwt-how-it-works-why">JSON Web Token for Java and
+            Android</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://developer.android.com/training/id-auth/authenticate">OAuth 2.0</a>
+    <ul>
+      <li>Tutorials:
+        <ul>
+          <li><a href="https://developers.google.com/android/guides/http-auth">Authorizing and Using REST APIs</a></li>
+          <li><a href="https://developers.google.com/api-client-library/java/google-api-java-client/oauth2">Using
+            OAuth 2.0 with the Google API Client Library for Java</a></li>
+        </ul>
+      </li>
+      <li>API documentation
+        <ul>
+          <li><a href="https://developer.android.com/reference/android/accounts/AccountManager">AccountManager</a>
+          </li>
+          <li><a href="https://github.com/googlesamples/easypermissions">EasyPermissions</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<div class="section">Learning outcomes</div>
+<ul>
+  <li>Understand JWT and oauth2 authentication mechanisms</li>
+  <li>Secure mobile applications which consume REST services via JWT</li>
+  <li>Use oauth2 when accessing external services secured via oauth2 mechanisms</li>
+</ul>
+<div class="section">Lecture slides: <a href="Lecture5.pdf">PDF slides</a></div>
+</body>
+</html>

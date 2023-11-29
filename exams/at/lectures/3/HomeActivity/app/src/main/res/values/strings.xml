@@ -1,0 +1,10 @@
+<resources>
+  <string name="app_name">HomeActivity</string>
+  <string name="led">Led</string>
+  <string name="button">Button</string>
+  <string name="toggle">Start</string>
+  <string name="stop">Stop</string>
+  <string name="start">Start</string>
+  <string name="buttonAction">Go ahead, press the button!</string>
+  <string name="ohNo">Oh no! Look what you did!</string>
+</resources>

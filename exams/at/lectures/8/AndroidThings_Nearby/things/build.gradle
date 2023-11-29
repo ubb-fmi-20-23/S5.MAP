@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+android {
+  compileSdkVersion 28
+  defaultConfig {
+    applicationId "com.example.androidthings.nearby"
+    minSdkVersion 27
+    targetSdkVersion 28
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  testImplementation 'junit:junit:4.12'
+  androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+  androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+  compileOnly 'com.google.android.things:androidthings:1.0'
+
+  implementation "com.google.android.gms:play-services-nearby:17.0.0"
+  implementation 'com.nilhcem.androidthings:driver-lcd1602:0.0.3'
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+  google()
+  mavenCentral()
+}

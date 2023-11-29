@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>errai-parent</artifactId>
+    <groupId>org.jboss.errai</groupId>
+    <version>4.0.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <name>Errai::Codegen</name>
+  <artifactId>errai-codegen</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.jboss.errai</groupId>
+      <artifactId>errai-common</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.enterprise</groupId>
+      <artifactId>cdi-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.mvel</groupId>
+      <artifactId>mvel2</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- NOTE: THIS IS IMPORTED JUST TO ALIGN VERSIONS WITH JDT -->
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-dev</artifactId>
+      <!-- This should not be packaged with the Errai Distro. There are no
+runtime dependencies on it and it breaks deployment on JBoss AS and Tomcat -->
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration combine.self="override">
+          <excludes>
+          </excludes>
+          <additionalClasspathElements>
+            <additionalClasspathElement>${basedir}/target/test-classes</additionalClasspathElement>
+            <additionalClasspathElement>${basedir}/target/classes</additionalClasspathElement>
+            <additionalClasspathElement>${basedir}/src/main/java</additionalClasspathElement>
+            <additionalClasspathElement>${basedir}/src/test/java</additionalClasspathElement>
+          </additionalClasspathElements>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+       <groupId>org.apache.maven.plugins</groupId>
+       <artifactId>maven-jar-plugin</artifactId>
+       <executions>
+         <execution>
+           <goals>
+             <goal>test-jar</goal>
+           </goals>
+         </execution>
+       </executions>
+     </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>integration-test</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>selenium-maven-plugin</artifactId>
+            <configuration>
+              <skip>true</skip>
+            </configuration>
+          </plugin>
+          <plugin>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <configuration>
+              <skipTests>true</skipTests>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+</project>

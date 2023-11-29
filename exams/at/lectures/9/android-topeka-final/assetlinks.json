@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.google.samples.apps.topeka.base",
+    "sha256_cert_fingerprints":
+    ["BE:66:1A:C9:C1:56:48:4D:FF:F1:5A:C8:D0:FE:FB:26:5E:84:5A:85:8E:3D:B0:F3:8C:B8:08:6A:DF:03:70:1D"]
+  }
+}]

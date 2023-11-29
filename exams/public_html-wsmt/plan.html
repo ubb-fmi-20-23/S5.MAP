@@ -1,0 +1,111 @@
+<html>
+
+<head>
+  <title>Plan</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/~dan/global.css">
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-85188810-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+
+<body>
+  <div class="title">Assessment Plan</div>
+  <br />
+  <div class="section">Individual Project Details</div>
+  <ul>
+    <li style="color: red">Due: last laboratory (April 11th, 2023) before Easter break.</li>
+    <li>Details:
+      <ul>
+        <li>An essey of at least 500 words on a topic selected from the 'Essays Titles' file from Teams.</li>
+        <li>A simple RESTful web service. A client and server that will implement the CRUD operations.</li>
+      </ul>
+    </li>
+    <li>Expected outcome:
+      <ul>
+        <li>The source code should be hosted in the individual github classroom repository.</li>
+        <li>
+          At least the following requirements should be met:
+          <ul>
+            <li>The server should be able to receive HTTP requests from clients using the RESTful API.</li>
+            <li>The server should be able to respond to these requests with the appropriate HTTP status codes (e.g. 200
+              OK, 404 Not Found, etc.) and a response body in JSON format.</li>
+            <li>The server should have a database or other data storage mechanism to persist data sent by clients.</li>
+            <li>The server should implement CRUD operations (Create, Read, Update, Delete) for the data stored in the
+              database.</li>
+            <li>The server should handle concurrent requests from multiple clients.</li>
+            <li>The server should validate incoming requests to ensure that they conform to the expected format and that
+              the data being sent is valid.</li>
+            <li>The client should be able to send requests to the server to create, read, update, and delete data using
+              HTTP methods (e.g. POST, GET, PUT, DELETE).</li>
+            <li>The client should be able to receive responses from the server in JSON format.</li>
+            <li>The client should display the data received from the server in a user-friendly way.</li>
+            <li>The client should provide a way for the user to input data and send requests to the server.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <div class="section">Team Project Details - Team</div>
+  <ul>
+    <li style="color: red">Due: May 25th, 2023. </li>
+    <li>Details:
+      <ul>
+        <li>A team of two students to tackle a bigger project. </li>
+      </ul>
+    </li>
+    <li>Expected outcome:
+      <ul>
+        <li>The source code should be hosted in the team github classroom repository.</li>
+        <li>
+          At least the following requirements should be met:
+          <ul>
+            <li>The project should use web services technology (e.g. SOAP, REST) to allow clients to access the server's
+              functionality.</li>
+            <li>The MOM framework used should support load balancing to distribute incoming requests across multiple
+              servers to ensure that no single server becomes overloaded.</li>
+            <li>The MOM framework used should support failover to ensure that if one server fails, requests can be
+              automatically redirected to another available server to ensure continuous service.</li>
+            <li>The MOM framework used should provide message persistence to ensure that messages are not lost in the
+              event of a server failure.</li>
+            <li>The MOM framework used should provide reliable message delivery to ensure that messages are delivered to
+              their intended recipients, even in the event of a network failure or other disruption.</li>
+            <li>The MOM framework used should support message queuing to enable asynchronous communication between
+              clients and servers.</li>
+            <li>The project should be designed to scale horizontally to handle increasing numbers of clients and data
+              volume.</li>
+            <li>The MOM framework used should provide security features to ensure the confidentiality, integrity, and
+              availability of messages.</li>
+            <li>The project should be designed to work with existing MOM frameworks, such as Apache ActiveMQ, IBM MQ, or
+              RabbitMQ.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="section">Final grade</div>
+  <ul>
+    <li style="color: red">You will receive a final grade only if you successfully submitted the details for both the
+      individual and the team project.</li>
+    <li>Final Grade = IndividualGrade * 0.5 + TeamGrade * 0.5</li>
+    <li>If the above deadlines are not met for one of the projects in order to receive a grade you will need to
+      attend the session exam. </br>In this case the Final Grade = IndividualGrade * 0.4 + TeamGrade * 0.4 + Exam Grade * 0.2</li>
+  </ul>
+</body>
+
+</html>
